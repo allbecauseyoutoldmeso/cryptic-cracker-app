@@ -9,6 +9,14 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     alignItems: 'center'
   },
+  container: {
+    marginTop: 100
+  },
+  menu: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between'
+  },
   text: {
     fontSize: 20,
     color: '#e94e77'
@@ -17,14 +25,15 @@ const styles = StyleSheet.create({
     fontSize: 20,
     backgroundColor: '#f4ead5',
     color: '#e94e77',
-    width: '30%',
+    width: 200,
     borderRadius: 4,
     borderWidth: 0.5,
     borderColor: '#e94e77'
   },
   buttonContainer: {
     backgroundColor: '#e94e77',
-    borderRadius: 5
+    borderRadius: 5,
+    width: 100
   },
   gadgetContainer: {
     marginTop: 100
