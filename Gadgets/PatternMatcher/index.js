@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { View, TextInput, Text, Button } from 'react-native'
+import { View, TextInput, Text, Button, Keyboard } from 'react-native'
 import styles from '../../styles'
 import NumberSelector from './NumberSelector'
 import { ascendingArray } from './helpers'
@@ -25,6 +25,7 @@ const PatternMatcher = () => {
   }
 
   const handleClick = () => {
+    Keyboard.dismiss()
     getMatches(pattern).then(response => setMatches(response))
   }
 
@@ -48,7 +49,9 @@ const PatternMatcher = () => {
         <Button onPress={handleClick} title="submit" color="#f4ead5" />
       </View>
       {matches.map(item => (
-        <Text style={styles.text}>{item}</Text>
+        <Text style={styles.text} key={item}>
+          {item}
+        </Text>
       ))}
     </View>
   )

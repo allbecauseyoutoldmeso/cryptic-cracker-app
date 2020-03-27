@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Text, View, TextInput, Button } from 'react-native'
+import { Text, View, TextInput, Button, Keyboard } from 'react-native'
 import styles from '../styles'
 
 const Form = ({ getResponse, label }) => {
@@ -11,6 +11,7 @@ const Form = ({ getResponse, label }) => {
   }
 
   const handleClick = () => {
+    Keyboard.dismiss()
     getResponse(input).then(response => setResults(response))
   }
 
