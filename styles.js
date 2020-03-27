@@ -7,9 +7,12 @@ const styles = StyleSheet.create({
     flexGrow: 1
   },
   container: {
+    height: '50%',
     marginTop: 100,
+    marginBottom: 100,
     display: 'flex',
     flexDirection: 'column',
+    justifyContent: 'space-between',
     alignItems: 'center'
   },
   text: {
@@ -31,8 +34,21 @@ const styles = StyleSheet.create({
     width: 100,
     margin: 20
   },
-  gadgetContainer: {
-    margin: 100
+  patternInput: {
+    fontSize: 20,
+    backgroundColor: '#f4ead5',
+    color: '#e94e77',
+    width: 20,
+    borderRadius: 4,
+    borderWidth: 0.5,
+    borderColor: '#e94e77',
+    margin: 4
+  },
+  patternInputContainer: {
+    display: 'flex',
+    flexDirection: 'row',
+    marginTop: 200,
+    flexWrap: 'wrap'
   }
 })
 

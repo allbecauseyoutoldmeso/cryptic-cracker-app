@@ -2,6 +2,7 @@ import React from 'react'
 import AnagramCracker from './AnagramCracker'
 import DefinitionFinder from './DefinitionFinder'
 import SynonymFinder from './SynonymFinder'
+import PatternMatcher from './PatternMatcher/index'
 
 const Gadget = ({ gadget }) => {
   switch (gadget) {
@@ -11,6 +12,8 @@ const Gadget = ({ gadget }) => {
       return <SynonymFinder />
     case 'definitionFinder':
       return <DefinitionFinder />
+    case 'patternMatcher':
+      return <PatternMatcher />
 
     default:
       return null
