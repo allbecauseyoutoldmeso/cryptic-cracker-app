@@ -27,7 +27,9 @@ const Form = ({ getResponse, label }) => {
         <Button onPress={handleClick} title="submit" color="#f4ead5" />
       </View>
       {results.map(item => (
-        <Text style={styles.text}>{item}</Text>
+        <Text style={styles.text}>
+          {item} key={item}
+        </Text>
       ))}
     </>
   )

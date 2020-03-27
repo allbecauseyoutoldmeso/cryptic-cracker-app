@@ -11,7 +11,7 @@ const NumberSelector = ({ length, changeLength }) => {
       selectedValue={length}
     >
       {ascendingArray(40).map(num => {
-        return <Picker.Item color="#e94e77" label={num} value={num} />
+        return <Picker.Item color="#e94e77" label={num} value={num} key={num} />
       })}
     </Picker>
   )
