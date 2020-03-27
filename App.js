@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { View, Text, Button } from 'react-native'
 import styles from './styles'
-import Gadget from './Gadget'
+import Gadgets from './Gadgets'
 import Menu from './Menu'
 
 const App = () => {
@@ -12,7 +12,7 @@ const App = () => {
       <View style={styles.container}>
         <Menu setGadget={setGadget} />
         <View style={styles.gadgetContainer}></View>
-        <Gadget gadget={gadget} />
+        <Gadgets gadget={gadget} />
       </View>
     </View>
   )

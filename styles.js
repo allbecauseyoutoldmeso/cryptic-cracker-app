@@ -4,13 +4,13 @@ import { StyleSheet } from 'react-native'
 const styles = StyleSheet.create({
   background: {
     backgroundColor: '#c6e5d9',
-    display: 'flex',
-    flexGrow: 1,
-    flexDirection: 'column',
-    alignItems: 'center'
+    flexGrow: 1
   },
   container: {
-    marginTop: 100
+    marginTop: 100,
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center'
   },
   menu: {
     display: 'flex',

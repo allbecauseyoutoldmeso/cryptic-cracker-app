@@ -1,23 +1,22 @@
 import React, { useState } from 'react'
 import { Text, View, TextInput, Button } from 'react-native'
-import styles from './styles'
-import { getAnagrams } from './apiRequests'
+import styles from '../styles'
 
-const AnagramCracker = () => {
-  const [letters, setLetters] = useState(null)
-  const [anagrams, setAnagrams] = useState([])
+const Form = ({ getResponse, label }) => {
+  const [input, setInput] = useState(null)
+  const [results, setResults] = useState([])
 
   const handleChange = text => {
-    setLetters(text)
+    setInput(text)
   }
 
   const handleClick = () => {
-    getAnagrams(letters).then(anagrams => setAnagrams(anagrams))
+    getResponse(input).then(response => setResults(response))
   }
 
   return (
     <>
-      <Text style={styles.text}>letters</Text>
+      <Text style={styles.text}>{label}</Text>
       <TextInput
         onChangeText={handleChange}
         style={styles.input}
@@ -26,11 +25,11 @@ const AnagramCracker = () => {
       <View style={styles.buttonContainer}>
         <Button onPress={handleClick} title="submit" color="#f4ead5" />
       </View>
-      {anagrams.map(item => (
+      {results.map(item => (
         <Text style={styles.text}>{item}</Text>
       ))}
     </>
   )
 }
 
-export default AnagramCracker
+export default Form
