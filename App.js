@@ -10,7 +10,7 @@ const App = () => {
   return (
     <View style={styles.background}>
       <View style={styles.container}>
-        <Menu setGadget={setGadget} />
+        <Menu setGadget={setGadget} gadget={gadget} />
         <View style={styles.gadgetContainer}></View>
         <Gadgets gadget={gadget} />
       </View>

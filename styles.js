@@ -12,11 +12,6 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     alignItems: 'center'
   },
-  menu: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between'
-  },
   text: {
     fontSize: 20,
     color: '#e94e77'
@@ -33,10 +28,11 @@ const styles = StyleSheet.create({
   buttonContainer: {
     backgroundColor: '#e94e77',
     borderRadius: 5,
-    width: 100
+    width: 100,
+    margin: 20
   },
   gadgetContainer: {
-    marginTop: 100
+    margin: 100
   }
 })
 

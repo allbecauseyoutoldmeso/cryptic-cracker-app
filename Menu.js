@@ -1,35 +1,27 @@
 import React from 'react'
-import { View, Button } from 'react-native'
+import { Picker } from 'react-native'
 import styles from './styles'
 
-const Menu = ({ setGadget }) => {
-  const handleClick = gadget => {
-    setGadget(gadget)
+const Menu = ({ setGadget, gadget }) => {
+  const handleChange = option => {
+    setGadget(option)
   }
 
   return (
-    <View style={styles.menu}>
-      <Button
-        title="anagrams"
+    <Picker
+      style={{ height: 50, width: 150 }}
+      onValueChange={handleChange}
+      selectedValue={gadget}
+    >
+      <Picker.Item color="#e94e77" label="anagrams" value="anagramCracker" />
+      <Picker.Item color="#e94e77" label="synonyms" value="synonymFinder" />
+      <Picker.Item
         color="#e94e77"
-        onPress={() => handleClick('anagramCracker')}
+        label="definitions"
+        value="definitionFinder"
       />
-      <Button
-        title="pattern matcher"
-        color="#e94e77"
-        onPress={() => handleClick('patternMatcher')}
-      />
-      <Button
-        title="synonyms"
-        color="#e94e77"
-        onPress={() => handleClick('synonymFinder')}
-      />
-      <Button
-        title="definitions"
-        color="#e94e77"
-        onPress={() => handleClick('definitionFinder')}
-      />
-    </View>
+      <Picker.Item color="#e94e77" label="patterns" value="patternMatcher" />
+    </Picker>
   )
 }
 
