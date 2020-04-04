@@ -1,9 +1,9 @@
 import React from 'react'
+import Template from './Template'
 import { getDefinitions } from '../apiRequests'
-import Form from './Form'
 
 const DefinitionFinder = () => {
-  return <Form getResponse={getDefinitions} label="word" />
+  return <Template getResults={getDefinitions} label="word" />
 }
 
 export default DefinitionFinder

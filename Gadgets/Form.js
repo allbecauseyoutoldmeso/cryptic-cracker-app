@@ -1,18 +1,10 @@
 import React, { useState } from 'react'
-import { Text, View, TextInput, Button, Keyboard } from 'react-native'
+import { View, TextInput, Button } from 'react-native'
 import styles from '../styles'
 
-const Form = ({ getResponse, label }) => {
-  const [input, setInput] = useState(null)
-  const [results, setResults] = useState([])
-
+const Form = ({ setInput, handleClick, label }) => {
   const handleChange = text => {
     setInput(text)
-  }
-
-  const handleClick = () => {
-    Keyboard.dismiss()
-    getResponse(input).then(response => setResults(response))
   }
 
   return (
@@ -27,11 +19,6 @@ const Form = ({ getResponse, label }) => {
       <View style={styles.buttonContainer}>
         <Button onPress={handleClick} title="submit" color="#f4ead5" />
       </View>
-      {results.map(item => (
-        <Text style={styles.text}>
-          {item} key={item}
-        </Text>
-      ))}
     </>
   )
 }

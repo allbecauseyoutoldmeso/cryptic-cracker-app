@@ -1,9 +1,9 @@
 import React from 'react'
+import Template from './Template'
 import { getSynonyms } from '../apiRequests'
-import Form from './Form'
 
 const SynonymFinder = () => {
-  return <Form getResponse={getSynonyms} label="word" />
+  return <Template getResults={getSynonyms} label="letters" />
 }
 
 export default SynonymFinder

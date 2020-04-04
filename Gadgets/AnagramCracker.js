@@ -1,9 +1,9 @@
 import React from 'react'
+import Template from './Template'
 import { getAnagrams } from '../apiRequests'
-import Form from './Form'
 
 const AnagramCracker = () => {
-  return <Form getResponse={getAnagrams} label="letters" />
+  return <Template getResults={getAnagrams} label="word" />
 }
 
 export default AnagramCracker
